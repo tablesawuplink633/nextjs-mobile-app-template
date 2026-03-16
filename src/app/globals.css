@@ -135,6 +135,8 @@
   body {
     @apply bg-background;
     background-color: #f5f0e8;
+    min-height: 100dvh;
+    padding-bottom: env(safe-area-inset-bottom);
   }
   .dark body {
     background-color: #1a1714;
