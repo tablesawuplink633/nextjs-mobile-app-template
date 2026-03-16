@@ -179,15 +179,13 @@ src/
 │   ├── templates/          # Workout template management
 │   ├── goals/              # Goal tracking
 │   ├── settings/           # Settings screen
-│   ├── export/             # Data export/import
-│   └── onboarding/         # First-run onboarding flow
+│   └── export/             # Data export/import
 ├── hooks/                  # useProfile, useEvents, useSchedule, useTemplates, etc.
 └── lib/
     ├── orpc.ts             # oRPC client (browser-side)
     ├── types.ts            # all TypeScript types
     ├── defaults.ts         # default profile, schedule, templates
     ├── analytics.ts        # streak calc, weekly review, insights
-    ├── notifications.ts    # schedule-based browser notifications
     ├── view-transition.ts  # View Transitions API wrapper
     ├── sw-register.ts      # service worker registration
     └── server/

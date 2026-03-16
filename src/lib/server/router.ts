@@ -21,8 +21,6 @@ const ProfileSchema = z.object({
   preferredTime: z.string(),
   restDays: z.array(z.string()),
   goals: z.array(z.string()),
-  notificationsEnabled: z.boolean(),
-  onboardingComplete: z.boolean(),
   createdAt: z.string(),
   updatedAt: z.string(),
 });

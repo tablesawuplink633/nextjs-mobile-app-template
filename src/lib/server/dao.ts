@@ -25,8 +25,6 @@ export function getProfile(): Profile {
     preferredTime: row.preferred_time,
     restDays: JSON.parse(row.rest_days),
     goals: JSON.parse(row.goals),
-    notificationsEnabled: !!row.notifications_enabled,
-    onboardingComplete: !!row.onboarding_complete,
     createdAt: row.created_at,
     updatedAt: row.updated_at,
   };
@@ -35,8 +33,8 @@ export function getProfile(): Profile {
 function insertProfile(p: Profile) {
   const db = getDb();
   db.prepare(`
-    INSERT OR REPLACE INTO profile (id, wake_time, timezone, preferred_time, rest_days, goals, notifications_enabled, onboarding_complete, created_at, updated_at)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    INSERT OR REPLACE INTO profile (id, wake_time, timezone, preferred_time, rest_days, goals, created_at, updated_at)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
   `).run(
     p.id,
     p.wakeTime,
@@ -44,8 +42,6 @@ function insertProfile(p: Profile) {
     p.preferredTime,
     JSON.stringify(p.restDays),
     JSON.stringify(p.goals),
-    p.notificationsEnabled ? 1 : 0,
-    p.onboardingComplete ? 1 : 0,
     p.createdAt,
     p.updatedAt,
   );

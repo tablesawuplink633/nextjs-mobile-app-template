@@ -31,8 +31,6 @@ function migrate(db: Database.Database) {
       preferred_time TEXT NOT NULL DEFAULT '07:00',
       rest_days TEXT NOT NULL DEFAULT '["sunday"]',
       goals TEXT NOT NULL DEFAULT '[]',
-      notifications_enabled INTEGER NOT NULL DEFAULT 0,
-      onboarding_complete INTEGER NOT NULL DEFAULT 0,
       created_at TEXT NOT NULL DEFAULT (datetime('now')),
       updated_at TEXT NOT NULL DEFAULT (datetime('now'))
     );

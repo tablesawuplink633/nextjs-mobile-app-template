@@ -77,8 +77,6 @@ export const DEFAULT_PROFILE: Profile = {
     'Try a new exercise each week',
     'Improve consistency over intensity',
   ],
-  notificationsEnabled: false,
-  onboardingComplete: false,
   createdAt: new Date().toISOString(),
   updatedAt: new Date().toISOString(),
 };
@@ -103,7 +101,7 @@ export const SCHEDULE_TYPE_LABELS: Record<string, string> = {
   evening_stretch: 'Evening stretch',
 };
 
-// ─── Motivational Copy ───────────────────────────────────────────
+// ─── Motivational Copy ──────────────────────────────────────────
 
 export const MOTIVATIONAL_MESSAGES = {
   restDay: [

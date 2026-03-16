@@ -68,8 +68,6 @@ export interface Profile {
   preferredTime: string; // HH:mm — preferred workout time
   restDays: string[]; // e.g. ['sunday', 'wednesday']
   goals: string[];
-  notificationsEnabled: boolean;
-  onboardingComplete: boolean;
   createdAt: string;
   updatedAt: string;
 }

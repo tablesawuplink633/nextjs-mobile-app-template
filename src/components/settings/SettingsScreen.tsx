@@ -10,30 +10,15 @@ import { Separator } from '@/components/ui/separator';
 import { useProfile } from '@/hooks/useProfile';
 import { useSchedule } from '@/hooks/useSchedule';
 import { useTheme } from '@/hooks/useTheme';
-import { requestNotificationPermission, clearAllNotifications, scheduleNotifications } from '@/lib/notifications';
 import { client } from '@/lib/orpc';
-import { Sun, Moon, Monitor, Bell, AlertTriangle, Trash2 } from 'lucide-react';
-import type { ThemeMode } from '@/hooks/useTheme';
+import { Sun, Moon, Monitor, AlertTriangle, Trash2 } from 'lucide-react';
 import { SCHEDULE_TYPE_LABELS } from '@/lib/defaults';
 
 export function SettingsScreen() {
   const { profile, updateProfile } = useProfile();
   const { schedule, updateSlot, resetSchedule } = useSchedule();
-  const { mode, theme, setMode } = useTheme();
+  const { mode, setMode } = useTheme();
   const [showDanger, setShowDanger] = useState(false);
-
-  const handleNotificationToggle = async (enabled: boolean) => {
-    if (enabled) {
-      const granted = await requestNotificationPermission();
-      if (granted) {
-        await updateProfile({ notificationsEnabled: true });
-        scheduleNotifications(schedule);
-      }
-    } else {
-      clearAllNotifications();
-      await updateProfile({ notificationsEnabled: false });
-    }
-  };
 
   const handleClearData = async () => {
     if (window.confirm('This will delete ALL your data. This cannot be undone. Are you sure?')) {
@@ -68,10 +53,10 @@ export function SettingsScreen() {
           <h3 className="text-sm font-medium">Appearance</h3>
           <div className="flex gap-2">
             {([
-              { value: 'system', label: 'System', icon: Monitor },
-              { value: 'light', label: 'Light', icon: Sun },
-              { value: 'dark', label: 'Dark', icon: Moon },
-            ] as const).map(({ value, label, icon: Icon }) => (
+              { value: 'system' as const, label: 'System', icon: Monitor },
+              { value: 'light' as const, label: 'Light', icon: Sun },
+              { value: 'dark' as const, label: 'Dark', icon: Moon },
+            ]).map(({ value, label, icon: Icon }) => (
               <button
                 key={value}
                 type="button"
@@ -136,28 +121,6 @@ export function SettingsScreen() {
               </div>
             ))}
           </div>
-        </CardContent>
-      </Card>
-
-      {/* Notifications */}
-      <Card className="shadow-sm">
-        <CardContent className="p-4 space-y-4">
-          <h3 className="text-sm font-medium">Notifications</h3>
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2.5">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-muted/60">
-                <Bell className="h-4 w-4" />
-              </div>
-              <Label>Workout reminders</Label>
-            </div>
-            <Switch
-              checked={profile.notificationsEnabled}
-              onCheckedChange={handleNotificationToggle}
-            />
-          </div>
-          <p className="text-xs text-muted-foreground leading-relaxed">
-            Browser notifications 5 minutes before each scheduled session.
-          </p>
         </CardContent>
       </Card>
 
